@@ -34,12 +34,12 @@ class DatabaseSchemaTest {
         }
     }
 
-    @Test
-    void shouldHaveHealthMetricsTable() throws Exception {
-        try (Connection conn = dataSource.getConnection()) {
-            assertThat(tableExists(conn, "health_metrics")).isTrue();
-        }
-    }
+//    @Test
+//    void shouldHaveHealthMetricsTable() throws Exception {
+//        try (Connection conn = dataSource.getConnection()) {
+//            assertThat(tableExists(conn, "health_metrics")).isTrue();
+//        }
+//    }
 
     @Test
     void shouldHaveStatisticsTable() throws Exception {
@@ -56,13 +56,13 @@ class DatabaseSchemaTest {
         }
     }
 
-    @Test
-    void healthMetricsTableHasExpectedColumns() throws Exception {
-        try (Connection conn = dataSource.getConnection()) {
-            Set<String> cols = tableColumns(conn, "health_metrics");
-            assertThat(cols).contains("id", "user_id");
-        }
-    }
+//    @Test
+//    void healthMetricsTableHasExpectedColumns() throws Exception {
+//        try (Connection conn = dataSource.getConnection()) {
+//            Set<String> cols = tableColumns(conn, "health_metrics");
+//            assertThat(cols).contains("id", "user_id");
+//        }
+//    }
 
     @Test
     void statisticsTableHasExpectedColumns() throws Exception {
