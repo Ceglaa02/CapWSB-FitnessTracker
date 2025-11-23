@@ -24,10 +24,10 @@ public class Event {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "startTime")
+    @Column(name = "start_time")
     private Date startTime;
 
-    @Column(name = "endTime")
+    @Column(name = "end_time")
     private Date endTime;
 
     @Column(name = "country")

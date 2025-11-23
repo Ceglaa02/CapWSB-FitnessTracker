@@ -23,19 +23,19 @@ public class Training {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name = "startDate")
+    @Column(name = "start_time")
     private Date startTime;
 
-    @Column(name = "endDate")
+    @Column(name = "end_time")
     private Date endTime;
 
-    @Column(name = "activityType")
+    @Column(name = "activity_type")
     private ActivityType activityType;
 
     @Column(name = "distance")
     private double distance;
 
-    @Column(name = "averageSpeed")
+    @Column(name = "average_speed")
     private double averageSpeed;
 
     public Training(

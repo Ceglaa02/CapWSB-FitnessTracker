@@ -27,16 +27,16 @@ public class WorkoutSession {
     @Column(name = "timestamp")
     private String timestamp;
 
-    @Column(name = "startLatitude")
+    @Column(name = "start_latitude")
     private double startLatitude;
 
-    @Column(name = "startLongitude")
+    @Column(name = "start_longitude")
     private double startLongitude;
 
-    @Column(name = "endLatitude")
+    @Column(name = "end_latitude")
     private double endLatitude;
 
-    @Column(name = "endLongitude")
+    @Column(name = "end_longitude")
     private double endLongitude;
 
     @Column(name = "altitude")
