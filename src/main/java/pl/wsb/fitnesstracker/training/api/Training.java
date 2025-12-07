@@ -1,7 +1,10 @@
 package pl.wsb.fitnesstracker.training.api;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import pl.wsb.fitnesstracker.training.internal.ActivityType;
 import pl.wsb.fitnesstracker.user.api.User;
 
@@ -18,18 +21,18 @@ public class Training {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Setter
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name = "start_time")
+    @Column(name = "start_time", nullable = false)
     private Date startTime;
 
-    @Column(name = "end_time")
+    @Column(name = "end_time", nullable = false)
     private Date endTime;
 
-    @Column(name = "activity_type")
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name = "activity_type", nullable = false)
     private ActivityType activityType;
 
     @Column(name = "distance")
@@ -52,4 +55,5 @@ public class Training {
         this.distance = distance;
         this.averageSpeed = averageSpeed;
     }
+
 }
